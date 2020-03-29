@@ -5,7 +5,7 @@
 
 trigger:
 - master
-- job: Linux
+- job: 'Linux'
   pool:
     vmImage: 'ubuntu-latest'
   steps:
