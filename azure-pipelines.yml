@@ -5,13 +5,14 @@
 
 trigger:
 - master
-
-pool:
-  vmImage: 'ubuntu-latest'
-steps:
-- task: UsePythonVersion@0
-  inputs:
-    versionSpec: '3.6'
+- job: Linux
+  pool:
+    vmImage: 'ubuntu-latest'
+  steps:
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '3.6'
+  - script: echo hello from Linux  
 
 - script: |
     python -m pip install --upgrade pip
